@@ -17,7 +17,7 @@
 composer.json:
 ```json
     [...]
-    "require" : {
+    "require-dev" : {
         [...]
         "sansis/develbundle" : "dev-master"
     },
@@ -33,4 +33,12 @@ composer.json:
 ```php
          //SanSIS Core Production Bundles
          new SanSIS\Core\DevelBundle\SanSISCoreDevelBundle(),
+```
+
+## Add to routing.yml
+
+```yml  
+san_sis_core_devel:
+    resource: "@SanSISCoreDevelBundle/Resources/config/routing.yml"
+    prefix:   /
 ```
