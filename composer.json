@@ -1,0 +1,25 @@
+{
+	"name" : "sansis/develbundle",
+	"description" : "SanSIS Devel Bundle for Symfony development",
+	"type" : "symfony-bundle",
+	"authors" : [{
+			"name" : "Pablo Santiago Sanchez",
+			"email" : "phackwer@gmail.com"
+		}
+	],
+	"keywords" : [
+		"devel bundle symfony development"
+	],
+	"license" : "BSD",
+	"autoload" : {
+		"psr-0" : {
+			"SanSIS\\Core\\DevelBundle" : ""
+		}
+	},
+	"target-dir" : "SanSIS/Core/DevelBundle",
+	"extra" : {
+		"branch-alias" : {
+			"dev-master" : "1.0-dev"
+		}
+	}
+}

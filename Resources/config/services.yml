@@ -1,0 +1,7 @@
+parameters:
+#    san_sis_core_devel.example.class: SanSIS\Core\DevelBundle\Example
+
+services:
+#    san_sis_core_devel.example:
+#        class: %san_sis_core_devel.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
