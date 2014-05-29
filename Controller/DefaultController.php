@@ -1,13 +1,11 @@
 <?php
 
-namespace SanSIS\Core\DevelBundle\Controller;
+namespace Ibram\Core\DevelBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
-class DefaultController extends Controller
+class DefaultController extends ControllerAbstract
 {
-    public function indexAction($name)
+    public function indexAction()
     {
-        return $this->render('SanSISCoreDevelBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('IbramCoreDevelBundle:Default:index.html.twig');
     }
 }

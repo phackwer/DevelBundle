@@ -1,3 +1,96 @@
-san_sis_core_devel_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: SanSISCoreDevelBundle:Default:index }
+ibram_core_devel_homepage:
+    pattern:  /
+    defaults: { _controller: IbramCoreDevelBundle:Default:index }
+
+stress:
+    pattern: /stress
+    defaults: { _controller: IbramCoreDevelBundle:Default:index }
+
+composer:
+    pattern: /composer
+    defaults: { _controller: IbramCoreDevelBundle:Generate:composer }
+
+app_core_bundle:
+    pattern: /generateAppCoreBundle
+    defaults: { _controller: IbramCoreDevelBundle:Generate:appCoreBundle }
+
+config_yml:
+    pattern: /generateConfigYml
+    defaults: { _controller: IbramCoreDevelBundle:Generate:configYml }
+
+parameters_yml:
+    pattern: /generateParametersYml
+    defaults: { _controller: IbramCoreDevelBundle:Generate:parametersYml }
+
+select_schema:
+    pattern: /selectSchema
+    defaults: { _controller: IbramCoreDevelBundle:Reverse:selectSchema }
+    
+list_schema_tables:
+    pattern: /listSchemaTables
+    defaults: { _controller: IbramCoreDevelBundle:Reverse:listSchemaTables }
+
+reverse_entities:
+    pattern: /reverseEntities
+    defaults: { _controller: IbramCoreDevelBundle:Reverse:reverseEntities }
+
+get_current_sequences_list:
+    pattern: /getCurrentSequencesList
+    defaults: { _controller: IbramCoreDevelBundle:Reverse:getCurrentSequencesList }
+
+init_acl:
+    pattern: /consoleInitAcl
+    defaults: { _controller: IbramCoreDevelBundle:Console:initAcl }
+
+generate_bundle:
+    pattern: /consoleGenerateBundle
+    defaults: { _controller: IbramCoreDevelBundle:Console:generateBundle }
+
+generate_controller:
+    pattern: /consoleGenerateController
+    defaults: { _controller: IbramCoreDevelBundle:Console:generateController }
+
+generate_doctrine_crud:
+    pattern: /consoleGenerateDoctrineCrud
+    defaults: { _controller: IbramCoreDevelBundle:Console:generateDoctrineCrud }
+
+generate_doctrine_form:
+    pattern: /consoleGenerateDoctrineForm
+    defaults: { _controller: IbramCoreDevelBundle:Console:generateDoctrineForm }
+
+
+php_unit:
+    pattern: /qaPhpUnit
+    defaults: { _controller: IbramCoreDevelBundle:QA:phpUnit }
+
+pmd:
+    pattern: /qaPmd
+    defaults: { _controller: IbramCoreDevelBundle:QA:pmd }
+
+cpd:
+    pattern: /qaCpd
+    defaults: { _controller: IbramCoreDevelBundle:QA:cpd }
+
+check_style:
+    pattern: /qaCheckStyle
+    defaults: { _controller: IbramCoreDevelBundle:QA:checkStyle }
+
+cache_clear:
+    pattern: /toolsCacheClear
+    defaults: { _controller: IbramCoreDevelBundle:Tools:cacheClear }
+
+assets_install:
+    pattern: /toolsAssetsInstall
+    defaults: { _controller: IbramCoreDevelBundle:Tools:assetsInstall }
+
+service_list:
+    pattern: /toolsServiceList
+    defaults: { _controller: IbramCoreDevelBundle:Tools:serviceList }
+
+router_debug:
+    pattern: /toolsRouterDebug
+    defaults: { _controller: IbramCoreDevelBundle:Tools:routerDebug }
+
+report_load_fixtures:
+    pattern: /reportLoadFixtures
+    defaults: { _controller: IbramCoreDevelBundle:Tools:reportLoadFixtures }

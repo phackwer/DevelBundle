@@ -1,1 +1,87 @@
-Hello {{ name }}!
+{% extends "IbramCoreDevelBundle::base.html.twig" %}
+
+{% block body %}
+
+
+<strong class="title">Funcionalidades disponíveis</strong>
+
+<div class="box_borda">
+	<div class="padding">
+        <div class="span5">
+
+            {#<p><b>Ferramentas de pré-desenvolvimento</b>#}
+            {#<ul>#}
+            {#<li><a href="{{ path('app_core_bundle') }}">Criação do CoreBundle da aplicação</a></li>#}
+            {#<li><a href="{{ path('config_yml') }}">Configuração da aplicação</a></li>#}
+            {#<li><a href="{{ path('parameters_yml') }}">Configuração de parâmetros de banco de dados, SMTP, etc</a></li>#}
+            {#</ul>#}
+            {#</p>#}
+
+            <p><b>Ferramentas para desenvolvimento da camada modelo</b>
+            <ul>
+            <li><a href="{{ path('select_schema') }}">Criação de entidades a partir de reversa de banco</a></li>
+            </ul>
+            </p>
+
+            {#<p><b>Ferramentas de implementação</b>#}
+            {#<ul>#}
+            {#<li><a href="{{ path('generate_bundle') }}">Geração de Bundles</a></li>#}
+            {#<li><a href="{{ path('generate_controller') }}">Geração de Controllers</a></li>#}
+            {#<li><a href="{{ path('generate_doctrine_crud') }}">Geração de Cruds</a></li>#}
+            {#</ul>#}
+            {#</p>#}
+
+            <p><b>Ferramentas de conferência de implementação</b>
+            <ul>
+                <li><a href="{{ path('router_debug') }}">Rotas disponíveis na aplicação</a></li>
+            </ul>
+            </p>
+
+            <p><b>Ferramentas de Implantação e Limpeza de ambiente (Deploy)</b>
+            <ul>
+            <li><a href="{{ path('assets_install') }}">Instalação de assets</a></li>
+            <li><a href="{{ path('cache_clear') }}">Limpeza do Cache</a></li>
+            </ul>
+            </p>
+
+            <p><b>Ferramentas de controle de qualidade</b>
+            <ul>
+            <!--
+            <li><a href="{{ path('php_unit') }}">PHPUnit - Testes unitários</a> - ajudam a garantir o comportamento constante de componentes, funções e/ou códigos antes e após alterações/manutenções/correções</li>
+            -->
+            <li><a href="{{ path('pmd') }}">PMD - PHP Mess Detector</a> - ajuda a detectar possíveis gargalos na aplicação</li>
+            <li><a href="{{ path('cpd') }}">CPD - Copy and Paste Detector</a> - ajuda a controlar o reaproveitamento de código</li>
+            <li><a href="{{ path('check_style') }}">CS - Check Style</a> - ajuda a garantir a padronização do código</li>
+            </ul>
+            </p>
+
+            {#<p><b>Gerar/Carregar Dados (Fixtures)</b>#}
+            {#<ul>#}
+                {#<li><a href="{{ path('report_load_fixtures') }}">Gerar dados de Relatórios</a>#}
+                {#</li>#}
+            {#</ul>#}
+            {#</p>#}
+
+        </div>
+        <div class="span5">
+
+            <p><b>Exemplos de máscaras:</b>
+            <ul class=""form">
+                <li class="span12"><label class="span2">Data:</label> <input class="date_ddmmyyyy"></li>
+                <li class="span12"><label class="span2">Hora:</label> <input class="time"></li>
+                <li class="span12"><label class="span2">Inteiro:</label> <input class="integer"></li>
+                <li class="span12"><label class="span2">Ponto Flutuante:</label> <input class="float"></li>
+                <li class="span12"><label class="span2">Ponto Flutuante (BR):</label> <input class="float-br"></li>
+                <li class="span12"><label class="span2">Money:</label> <input class="money"></li>
+                <li class="span12"><label class="span2">Telefone:</label> <input class="phone"></li>
+                <li class="span12"><label class="span2">CPF:</label> <input class="cpf"></li>
+                <li class="span12"><label class="span2">CNPJ:</label> <input class="cnpj"></li>
+                <li class="span12"><label class="span2">CEP:</label> <input class="cep"></li>
+
+            </ul>
+            </p>
+        </div>
+        &nbsp;
+    </div>
+</div>
+{% endblock %}

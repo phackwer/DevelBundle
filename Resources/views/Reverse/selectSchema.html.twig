@@ -1,0 +1,74 @@
+{% extends "IbramCoreDevelBundle::base.html.twig" %}
+
+{% block body %}
+<strong class="title">Gerador de Entidades</strong>
+<div class="box_borda">
+	<div class="padding">
+		<p>
+            Esta funcionalidade visa criar as entidades para a aplicação realizando uma
+            reversa do banco de dados. Para tanto, é preciso informar os dados abaixo:
+        </p>
+		<form action="{{ path('reverse_entities') }}" method="POST">
+		<ul>		
+            <li>
+                <label class="row span4">Em qual bundle devem ser criadas as entidades?</label>
+				<select name="bundle" class="span4">
+				{% for bundle in bundles %}
+				    <option value="{{ bundle }}">{{ bundle }}</option>
+				{% endfor %}
+		        </select>
+    		</li>
+
+            <li>
+                <label class="row span4">De qual schema deve ser feita a reversa?</label>
+                <select name="schema" id="schema" class="span4">
+                    <option value="" selected>[== Selecione abaixo ==]</option>
+                    {% for schema in schemas %}
+                        <option value="{{ schema }}">{{ schema }}</option>
+                    {% endfor %}
+                </select>
+            </li>
+
+            <li>
+                <label class="row span4">Quais tabelas devem ser mapeadas</label>
+                <select name="tables[]" id="tables" class="span4" style="height:300px" multiple>
+                    <option value="">[== Selecione o Schema ==]</option>
+                </select>
+            </li>
+    		
+    	</ul>
+		<div class="pull-right">
+    		<input type="submit" value="Gerar" class="btn btn-primary" />
+    		<a href="{{ path('Ibram_core_devel_homepage') }}" id="voltarBt" class="btn">Voltar</a>
+		</div>
+		</form>
+	</div>
+</div>
+<script>
+
+function loadTables(){
+    $.ajax({
+        url: '{{ path('list_schema_tables')}}' ,
+        async : false,
+        type : 'get',
+        data: {
+            schema : $('#schema').val()
+        }
+    }).success(function (data){
+        $('#tables').html('');
+        if (data.length > 0) {
+            $(data).each(
+                    function(index, value){
+                        $('#tables').append( '<option value="'+ value +'" selected>' + value +'</option>' );
+                    }
+            )
+        }
+        else
+            $('#tables').append( '<option value="">[== **** Schema não possui objetos mapeáveis **** ==]</option>' );
+    });
+}
+
+$('#schema').change(loadTables);
+
+</script>
+{% endblock %}

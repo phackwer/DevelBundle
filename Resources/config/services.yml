@@ -1,7 +1,12 @@
 parameters:
-#    san_sis_core_devel.example.class: SanSIS\Core\DevelBundle\Example
+    ibram_core_devel.service.reverse: Ibram\Core\DevelBundle\Service\ReverseService
+    ibram_core_devel.service.generate: Ibram\Core\DevelBundle\Service\GenerateService
 
 services:
-#    san_sis_core_devel.example:
-#        class: %san_sis_core_devel.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    ibram_core_devel.service_reverse:
+        class: %ibram_core_devel.service.reverse%
+        arguments: ["@doctrine.orm.entity_manager"]
+        
+    ibram_core_devel.service_generate:
+        class: %ibram_core_devel.service.generate%
+        arguments: ["@doctrine.orm.entity_manager"]
