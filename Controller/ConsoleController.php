@@ -1,6 +1,6 @@
 <?php
 
-namespace Ibram\Core\DevelBundle\Controller;
+namespace SanSIS\Core\DevelBundle\Controller;
 
 class ConsoleController extends ControllerAbstract
 {

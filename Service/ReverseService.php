@@ -1,16 +1,16 @@
 <?php
 
-namespace Ibram\Core\DevelBundle\Service;
+namespace SanSIS\Core\DevelBundle\Service;
 
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\Tools\DisconnectedClassMetadataFactory;
 use Doctrine\ORM\Tools\Export\ClassMetadataExporter;
 use Doctrine\ORM\EntityManager;
 
-use \Ibram\Core\DevelBundle\Doctrine\DBAL\Platforms\SysAllOraclePlatform;
-use \Ibram\Core\DevelBundle\Doctrine\DBAL\Schema\SysAllOracleSchemaManager;
-use \Ibram\Core\DevelBundle\Doctrine\ORM\Mapping\Driver\DatabaseDriver;
-use \Ibram\Core\DevelBundle\Service\DevelService;
+use \SanSIS\Core\DevelBundle\Doctrine\DBAL\Platforms\SysAllOraclePlatform;
+use \SanSIS\Core\DevelBundle\Doctrine\DBAL\Schema\SysAllOracleSchemaManager;
+use \SanSIS\Core\DevelBundle\Doctrine\ORM\Mapping\Driver\DatabaseDriver;
+use \SanSIS\Core\DevelBundle\Service\DevelService;
 
 class ReverseService extends DevelService
 {
@@ -125,7 +125,7 @@ class ReverseService extends DevelService
             $model  = $this->generateClassSkeleton(
                     $nspEntity,
                     'AbstractBase',
-                    '\\Ibram\\Core\\BaseBundle\\Entity\\AbstractBase',
+                    '\\SanSIS\\Core\\BaseBundle\\Entity\\AbstractBase',
                     'abstract');
             file_put_contents($model_dir.'AbstractBase.php', $model);
             $response .= 'Criado arquivo '.$model_dir."AbstractBase.php\n";
@@ -135,7 +135,7 @@ class ReverseService extends DevelService
             $repo  = $this->generateClassSkeleton(
                     $nspRepo,
                     'AbstractBase',
-                    '\\Ibram\\Core\\BaseBundle\\EntityRepository\\AbstractBase',
+                    '\\SanSIS\\Core\\BaseBundle\\EntityRepository\\AbstractBase',
                     'abstract');
             file_put_contents($repos_dir.'AbstractBase.php', $repo);
             $response .= 'Criado arquivo '.$repos_dir."AbstractBase.php\n";

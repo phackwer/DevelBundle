@@ -1,6 +1,6 @@
 <?php
 
-namespace Ibram\Core\DevelBundle\Controller;
+namespace SanSIS\Core\DevelBundle\Controller;
 
 class GenerateController extends ControllerAbstract
 {
@@ -15,7 +15,7 @@ class GenerateController extends ControllerAbstract
 
     public function parametersYmlAction()
     {
-    	return $this->render('IbramCoreDevelBundle:Generate:parametersYml.html.twig');
+    	return $this->render('SanSISCoreDevelBundle:Generate:parametersYml.html.twig');
     }
 
 }

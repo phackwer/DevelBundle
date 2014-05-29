@@ -1,12 +1,12 @@
 parameters:
-    ibram_core_devel.service.reverse: Ibram\Core\DevelBundle\Service\ReverseService
-    ibram_core_devel.service.generate: Ibram\Core\DevelBundle\Service\GenerateService
+    sansis_core_devel.service.reverse: SanSIS\Core\DevelBundle\Service\ReverseService
+    sansis_core_devel.service.generate: SanSIS\Core\DevelBundle\Service\GenerateService
 
 services:
-    ibram_core_devel.service_reverse:
-        class: %ibram_core_devel.service.reverse%
+    sansis_core_devel.service_reverse:
+        class: %sansis_core_devel.service.reverse%
         arguments: ["@doctrine.orm.entity_manager"]
         
-    ibram_core_devel.service_generate:
-        class: %ibram_core_devel.service.generate%
+    sansis_core_devel.service_generate:
+        class: %sansis_core_devel.service.generate%
         arguments: ["@doctrine.orm.entity_manager"]

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ibram\Core\DevelBundle\Controller;
+namespace SanSIS\Core\DevelBundle\Controller;
 
 class QAController extends ControllerAbstract
 {
@@ -10,7 +10,7 @@ class QAController extends ControllerAbstract
         
         $out = implode("\n", $out);
 
-        return $this->render('IbramCoreDevelBundle::out.html.twig', array('out' => $out));
+        return $this->render('SanSISCoreDevelBundle::out.html.twig', array('out' => $out));
     }
 
     public function pmdAction()
@@ -19,7 +19,7 @@ class QAController extends ControllerAbstract
         
         $out = implode("\n", $out);
 
-        return $this->render('IbramCoreDevelBundle::out.html.twig', array('out' => $out));
+        return $this->render('SanSISCoreDevelBundle::out.html.twig', array('out' => $out));
     }
 
     public function cpdAction()
@@ -28,7 +28,7 @@ class QAController extends ControllerAbstract
         
         $out = implode("\n", $out);
 
-        return $this->render('IbramCoreDevelBundle::out.html.twig', array('out' => $out));
+        return $this->render('SanSISCoreDevelBundle::out.html.twig', array('out' => $out));
     }
 
     public function checkStyleAction()
@@ -37,7 +37,7 @@ class QAController extends ControllerAbstract
         
         $out = implode("\n", $out);
 
-        return $this->render('IbramCoreDevelBundle::out.html.twig', array('out' => $out));
+        return $this->render('SanSISCoreDevelBundle::out.html.twig', array('out' => $out));
     }
 
 }

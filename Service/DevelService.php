@@ -1,7 +1,7 @@
 <?php
-namespace Ibram\Core\DevelBundle\Service;
+namespace SanSIS\Core\DevelBundle\Service;
 
-use \Ibram\Core\BaseBundle\ServiceLayer\ServiceAbstract;
+use \SanSIS\Core\BaseBundle\ServiceLayer\ServiceAbstract;
 
 /**
  * @author pablo.sanchez
@@ -27,7 +27,7 @@ abstract class DevelService extends ServiceAbstract
 		$filteredBundles = array();
 	
 		foreach($bundles as $key => $bundle) {
-			if (strstr($key, 'Ibram') && !strstr($key, 'IbramCore')) {
+			if (strstr($key, 'SanSIS') && !strstr($key, 'SanSISCore')) {
 				$bundleName = get_class($bundle);
 				$bundleName = explode('\\',$bundleName);
 				array_pop($bundleName);

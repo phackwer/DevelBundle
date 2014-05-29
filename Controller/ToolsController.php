@@ -1,6 +1,6 @@
 <?php
 
-namespace Ibram\Core\DevelBundle\Controller;
+namespace SanSIS\Core\DevelBundle\Controller;
 
 class ToolsController extends ControllerAbstract
 {
@@ -21,7 +21,7 @@ class ToolsController extends ControllerAbstract
         $out .= "\n".implode("\n", $out3);
         $out .= "\n".implode("\n", $out4);
 
-        return $this->render('IbramCoreDevelBundle::out.html.twig', array('out' => $out));
+        return $this->render('SanSISCoreDevelBundle::out.html.twig', array('out' => $out));
     }
 
     public function assetsInstallAction()
@@ -30,7 +30,7 @@ class ToolsController extends ControllerAbstract
 
         $out = implode("\n", $out);
 
-        return $this->render('IbramCoreDevelBundle::out.html.twig', array('out' => $out));
+        return $this->render('SanSISCoreDevelBundle::out.html.twig', array('out' => $out));
     }
 
     public function serviceListAction()
@@ -43,16 +43,16 @@ class ToolsController extends ControllerAbstract
         
         $out = implode("\n", $out);
         
-        return $this->render('IbramCoreDevelBundle::out.html.twig', array('out' => $out));
+        return $this->render('SanSISCoreDevelBundle::out.html.twig', array('out' => $out));
     }
 
     public function reportLoadFixturesAction()
     {
-        exec($this->_getConsoleCommand().' doctrine:fixtures:load --fixtures=src/Ibram/Core/ReportBundle --append', $out);
+        exec($this->_getConsoleCommand().' doctrine:fixtures:load --fixtures=src/SanSIS/Core/ReportBundle --append', $out);
 
         $out = implode("\n", $out);
 
-        return $this->render('IbramCoreDevelBundle::out.html.twig', array('out' => $out));
+        return $this->render('SanSISCoreDevelBundle::out.html.twig', array('out' => $out));
     }
 
 }

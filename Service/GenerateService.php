@@ -1,10 +1,10 @@
 <?php
 
-namespace Ibram\Core\DevelBundle\Service;
+namespace SanSIS\Core\DevelBundle\Service;
 
 use Symfony\Component\HttpFoundation\Request;
 
-use \Ibram\Core\DevelBundle\Service\DevelService;
+use \SanSIS\Core\DevelBundle\Service\DevelService;
 
 class ReverseService extends DevelService
 {
@@ -50,7 +50,7 @@ class ReverseService extends DevelService
 				$class  = $this->generateClassSkeleton(
 						$bundle,
 						'abstract '.$base,
-						'\\Ibram\\Core\\BaseBundle\\'.$dir.'\\AbstractBase');
+						'\\SanSIS\\Core\\BaseBundle\\'.$dir.'\\AbstractBase');
 				file_put_contents($mkdir.'AbstractBase.php', $class);
 				echo 'Criado arquivo '.$mkdir.'AbstractBase.php'."<br>\n";
 			}

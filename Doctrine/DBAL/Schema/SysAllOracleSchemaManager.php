@@ -19,7 +19,7 @@
  * <http://www.phpdoctrine.org>.
  */
 
-namespace Ibram\Core\DevelBundle\Doctrine\DBAL\Schema;
+namespace SanSIS\Core\DevelBundle\Doctrine\DBAL\Schema;
 
 use Doctrine\DBAL\Schema\OracleSchemaManager;
 

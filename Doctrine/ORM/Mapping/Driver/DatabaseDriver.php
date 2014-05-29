@@ -17,7 +17,7 @@
  * <http://www.doctrine-project.org>.
  */
 
-namespace Ibram\Core\DevelBundle\Doctrine\ORM\Mapping\Driver;
+namespace SanSIS\Core\DevelBundle\Doctrine\ORM\Mapping\Driver;
 
 /**
  * The DatabaseDriver reverse engineers the mapping metadata from a database.

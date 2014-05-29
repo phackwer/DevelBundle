@@ -1,8 +1,8 @@
 <?php
 
-namespace Ibram\Core\DevelBundle\Controller;
+namespace SanSIS\Core\DevelBundle\Controller;
 
-use \Ibram\Core\BaseBundle\Controller\ControllerAbstract as BaseControllerAbstract;
+use \SanSIS\Core\BaseBundle\Controller\ControllerAbstract as BaseControllerAbstract;
 
 class ControllerAbstract extends BaseControllerAbstract
 {

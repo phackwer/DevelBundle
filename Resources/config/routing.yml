@@ -1,96 +1,96 @@
-ibram_core_devel_homepage:
+sansis_core_devel_homepage:
     pattern:  /
-    defaults: { _controller: IbramCoreDevelBundle:Default:index }
+    defaults: { _controller: SanSISCoreDevelBundle:Default:index }
 
 stress:
     pattern: /stress
-    defaults: { _controller: IbramCoreDevelBundle:Default:index }
+    defaults: { _controller: SanSISCoreDevelBundle:Default:index }
 
 composer:
     pattern: /composer
-    defaults: { _controller: IbramCoreDevelBundle:Generate:composer }
+    defaults: { _controller: SanSISCoreDevelBundle:Generate:composer }
 
 app_core_bundle:
     pattern: /generateAppCoreBundle
-    defaults: { _controller: IbramCoreDevelBundle:Generate:appCoreBundle }
+    defaults: { _controller: SanSISCoreDevelBundle:Generate:appCoreBundle }
 
 config_yml:
     pattern: /generateConfigYml
-    defaults: { _controller: IbramCoreDevelBundle:Generate:configYml }
+    defaults: { _controller: SanSISCoreDevelBundle:Generate:configYml }
 
 parameters_yml:
     pattern: /generateParametersYml
-    defaults: { _controller: IbramCoreDevelBundle:Generate:parametersYml }
+    defaults: { _controller: SanSISCoreDevelBundle:Generate:parametersYml }
 
 select_schema:
     pattern: /selectSchema
-    defaults: { _controller: IbramCoreDevelBundle:Reverse:selectSchema }
+    defaults: { _controller: SanSISCoreDevelBundle:Reverse:selectSchema }
     
 list_schema_tables:
     pattern: /listSchemaTables
-    defaults: { _controller: IbramCoreDevelBundle:Reverse:listSchemaTables }
+    defaults: { _controller: SanSISCoreDevelBundle:Reverse:listSchemaTables }
 
 reverse_entities:
     pattern: /reverseEntities
-    defaults: { _controller: IbramCoreDevelBundle:Reverse:reverseEntities }
+    defaults: { _controller: SanSISCoreDevelBundle:Reverse:reverseEntities }
 
 get_current_sequences_list:
     pattern: /getCurrentSequencesList
-    defaults: { _controller: IbramCoreDevelBundle:Reverse:getCurrentSequencesList }
+    defaults: { _controller: SanSISCoreDevelBundle:Reverse:getCurrentSequencesList }
 
 init_acl:
     pattern: /consoleInitAcl
-    defaults: { _controller: IbramCoreDevelBundle:Console:initAcl }
+    defaults: { _controller: SanSISCoreDevelBundle:Console:initAcl }
 
 generate_bundle:
     pattern: /consoleGenerateBundle
-    defaults: { _controller: IbramCoreDevelBundle:Console:generateBundle }
+    defaults: { _controller: SanSISCoreDevelBundle:Console:generateBundle }
 
 generate_controller:
     pattern: /consoleGenerateController
-    defaults: { _controller: IbramCoreDevelBundle:Console:generateController }
+    defaults: { _controller: SanSISCoreDevelBundle:Console:generateController }
 
 generate_doctrine_crud:
     pattern: /consoleGenerateDoctrineCrud
-    defaults: { _controller: IbramCoreDevelBundle:Console:generateDoctrineCrud }
+    defaults: { _controller: SanSISCoreDevelBundle:Console:generateDoctrineCrud }
 
 generate_doctrine_form:
     pattern: /consoleGenerateDoctrineForm
-    defaults: { _controller: IbramCoreDevelBundle:Console:generateDoctrineForm }
+    defaults: { _controller: SanSISCoreDevelBundle:Console:generateDoctrineForm }
 
 
 php_unit:
     pattern: /qaPhpUnit
-    defaults: { _controller: IbramCoreDevelBundle:QA:phpUnit }
+    defaults: { _controller: SanSISCoreDevelBundle:QA:phpUnit }
 
 pmd:
     pattern: /qaPmd
-    defaults: { _controller: IbramCoreDevelBundle:QA:pmd }
+    defaults: { _controller: SanSISCoreDevelBundle:QA:pmd }
 
 cpd:
     pattern: /qaCpd
-    defaults: { _controller: IbramCoreDevelBundle:QA:cpd }
+    defaults: { _controller: SanSISCoreDevelBundle:QA:cpd }
 
 check_style:
     pattern: /qaCheckStyle
-    defaults: { _controller: IbramCoreDevelBundle:QA:checkStyle }
+    defaults: { _controller: SanSISCoreDevelBundle:QA:checkStyle }
 
 cache_clear:
     pattern: /toolsCacheClear
-    defaults: { _controller: IbramCoreDevelBundle:Tools:cacheClear }
+    defaults: { _controller: SanSISCoreDevelBundle:Tools:cacheClear }
 
 assets_install:
     pattern: /toolsAssetsInstall
-    defaults: { _controller: IbramCoreDevelBundle:Tools:assetsInstall }
+    defaults: { _controller: SanSISCoreDevelBundle:Tools:assetsInstall }
 
 service_list:
     pattern: /toolsServiceList
-    defaults: { _controller: IbramCoreDevelBundle:Tools:serviceList }
+    defaults: { _controller: SanSISCoreDevelBundle:Tools:serviceList }
 
 router_debug:
     pattern: /toolsRouterDebug
-    defaults: { _controller: IbramCoreDevelBundle:Tools:routerDebug }
+    defaults: { _controller: SanSISCoreDevelBundle:Tools:routerDebug }
 
 report_load_fixtures:
     pattern: /reportLoadFixtures
-    defaults: { _controller: IbramCoreDevelBundle:Tools:reportLoadFixtures }
+    defaults: { _controller: SanSISCoreDevelBundle:Tools:reportLoadFixtures }

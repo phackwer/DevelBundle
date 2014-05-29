@@ -1,6 +1,6 @@
 <?php
 
-namespace Ibram\Core\DevelBundle\Controller;
+namespace SanSIS\Core\DevelBundle\Controller;
 
 class ReverseController extends ControllerAbstract
 {
@@ -14,7 +14,7 @@ class ReverseController extends ControllerAbstract
     public function selectSchemaAction()
     {
         // Carregando processamento via chamada de servico
-        $serv = $this->get('ibram_core_devel.service_reverse');
+        $serv = $this->get('sansis_core_devel.service_reverse');
         
         $schemas = $serv->getSchemas($this->getRequest());
         $bundles = $serv->getBundles($this->get('kernel')->getBundles());
@@ -24,7 +24,7 @@ class ReverseController extends ControllerAbstract
             'bundles' => $bundles
         );
         
-        return $this->render('IbramCoreDevelBundle:Reverse:selectSchema.html.twig', $viewData);
+        return $this->render('SanSISCoreDevelBundle:Reverse:selectSchema.html.twig', $viewData);
     }
     
     /**
@@ -36,7 +36,7 @@ class ReverseController extends ControllerAbstract
     public function listSchemaTablesAction()
     {
         // Carregando processamento via chamada de servico
-        $serv = $this->get('ibram_core_devel.service_reverse');
+        $serv = $this->get('sansis_core_devel.service_reverse');
     
         $tables = $serv->getSchemaTables($this->getRequest());
     
@@ -50,18 +50,18 @@ class ReverseController extends ControllerAbstract
     public function reverseEntitiesAction()
     {
         // Carregando processamento via chamada de servico
-        $serv = $this->get('ibram_core_devel.service_reverse');
+        $serv = $this->get('sansis_core_devel.service_reverse');
         
         $response = $serv->reverseEntities($this->getRequest(), $this->_getRootDir());
         
-        return $this->render('IbramCoreDevelBundle:Reverse:createEntities.html.twig', array(
+        return $this->render('SanSISCoreDevelBundle:Reverse:createEntities.html.twig', array(
         		'response' => $response
         ));
     }
 
     public function getCurrentSequencesListAction()
     {
-        $serv = $this->get('ibram_core_devel.service_reverse');
+        $serv = $this->get('sansis_core_devel.service_reverse');
         $seqs = $serv->getCurrentSequencesList();
         return $this->renderJson($seqs);
     }

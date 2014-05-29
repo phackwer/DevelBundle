@@ -1,14 +1,14 @@
 <?php
 /**
  * Reescrita do c�digo do Oracle Platform para poder fazer a reversa
- * dentro do ambiente do Ibram. O m�todo original n�o retorna nenhuma
+ * dentro do ambiente do SanSIS. O m�todo original n�o retorna nenhuma
  * tabela pois busca de sys.user_tables
  * 
  * @author pablo.sanchez
  *
  */
 
-namespace Ibram\Core\DevelBundle\Doctrine\DBAL\Platforms;
+namespace SanSIS\Core\DevelBundle\Doctrine\DBAL\Platforms;
 
 use Doctrine\DBAL\Schema\ForeignKeyConstraint;
 use Doctrine\DBAL\Schema\Index;
