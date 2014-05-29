@@ -16,7 +16,7 @@
 			"SanSIS\\Core\\DevelBundle" : ""
 		}
 	},
-	"target-dir" : "SanSIS/Core/DevelBundle",
+	"target-dir" : "",
 	"extra" : {
 		"branch-alias" : {
 			"dev-master" : "1.0-dev"
